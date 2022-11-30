@@ -10,8 +10,13 @@ produto: id, nome. quantidade, valor. observação
 repository de usuario 
     obterTodos, obterPorId, adicionar, atualizar, deletar
 
-Serviço de produtos
+Serviço de produtos ok
 // precisa ter as mesmas coisas que o repository
 // a diferença é que ele pode ter regra de negocio ou nao 
 
-obterTodos, obterPorId, adicionar, atualizar, deletar
+obterTodos, obterPorId, adicionar, atualizar, deletar ok 
+
+Controller de produto:
+
+Requsições de mapping
+obterTodos, obterPorId, adicionar, atualizar, deletar ok

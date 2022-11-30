@@ -56,12 +56,13 @@ public class ProdutoService {
       /**
      * Metodo para adicionar o produto na lista que será atualizado
      * @param produto que será atualizado
+     * @param id Id do produto para ser atualizado
      * @return protudo atualizado
      */
     public Produto atualizar (Integer id,Produto produto) {
         // ter alguma validação 
         produto.setId(id);
-        
+
        return produtoRepository.atualizar(produto);
       }
 }
