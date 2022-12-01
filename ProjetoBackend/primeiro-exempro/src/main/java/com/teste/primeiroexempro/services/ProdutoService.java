@@ -6,21 +6,21 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.teste.primeiroexempro.model.Produto;
-import com.teste.primeiroexempro.repository.ProdutoRepository;
+import com.teste.primeiroexempro.repository.ProdutoRepository_old;
+import com.teste.primeiroexempro.shared.ProdutoDTO;
 
 @Service
 public class ProdutoService {
 
     @Autowired  // inverter a dependencia  sem precisar instanciar
-    private ProdutoRepository produtoRepository;
+    private ProdutoRepository_old produtoRepository;
 
 
       /**
      * Retorna uma lista de produtos 
      * @return List de produtos
      */
-    public List<Produto> obterTodos(){
+    public List<ProdutoDTO> obterTodos(){
         //colocar regra aqui
     return produtoRepository.obterTodos();
 }
@@ -31,7 +31,7 @@ public class ProdutoService {
      * @param id do produto que será localizado
      * @return retorna um produto caso tenha encontrado (optional)
      */
-    public Optional<Produto> obterPorId(Integer id){
+    public Optional<ProdutoDTO> obterPorId(Integer id){
         return produtoRepository.obterPorId(id);
     }
 
@@ -41,7 +41,7 @@ public class ProdutoService {
      * @param produto
      * @return Retorna produto adicionado
      */
-    public Produto adicionar( Produto produto){
+    public ProdutoDTO adicionar( ProdutoDTO produto){
         
         return produtoRepository.adicionar(produto);
     }
@@ -59,7 +59,7 @@ public class ProdutoService {
      * @param id Id do produto para ser atualizado
      * @return protudo atualizado
      */
-    public Produto atualizar (Integer id,Produto produto) {
+    public ProdutoDTO atualizar (Integer id,ProdutoDTO produto) {
         // ter alguma validação 
         produto.setId(id);
 

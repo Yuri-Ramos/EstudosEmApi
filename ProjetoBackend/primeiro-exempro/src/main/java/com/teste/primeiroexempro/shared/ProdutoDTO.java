@@ -1,16 +1,7 @@
-package com.teste.primeiroexempro.model;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.id;
+package com.teste.primeiroexempro.shared;
 
-
-
-@Entity
-public class Produto {
-
-    @id // vai transformar essa coluna em primary key
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class ProdutoDTO {
+   
     private Integer id;
 
     private String name;
@@ -53,3 +44,4 @@ public class Produto {
 
 
 }
+
